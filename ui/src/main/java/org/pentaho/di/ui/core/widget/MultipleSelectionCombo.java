@@ -243,15 +243,15 @@ public class MultipleSelectionCombo extends Composite {
   protected int calculateTotalHeight( SelectionLabel label ) {
     GridLayout layout = (GridLayout) label.getLayout();
 
-    return layout.marginHeight + label.getHeight();
+    return layout.marginHeight + label.getHeight() + MARGIN_OFFSET;
   }
 
   protected void updateTagsUI( int height ) {
     int numRows = ( selectedItemLabels.length / 2 ) + ( selectedItemLabels.length % 2 );
     GridData newData = (GridData) bottomRow.getLayoutData();
 
-    newData.minimumHeight = numRows * ( height + MARGIN_OFFSET );
-    newData.heightHint = numRows * ( height + MARGIN_OFFSET );
+    newData.minimumHeight = numRows * height;
+    newData.heightHint = numRows * height;
     bottomRow.setLayoutData( newData );
 
     triggerShellResize();

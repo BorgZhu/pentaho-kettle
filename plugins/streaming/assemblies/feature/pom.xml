@@ -28,6 +28,7 @@
       <artifactId>pentaho-streaming-mqtt-plugin</artifactId>
       <version>${project.version}</version>
     </dependency>
+
   </dependencies>
 
   <build>
